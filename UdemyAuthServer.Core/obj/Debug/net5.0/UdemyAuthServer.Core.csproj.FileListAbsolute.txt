@@ -1,0 +1,15 @@
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\bin\Debug\net5.0\UdemyAuthServer.Core.deps.json
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\bin\Debug\net5.0\UdemyAuthServer.Core.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\bin\Debug\net5.0\UdemyAuthServer.Core.pdb
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net5.0\UdemyAuthServer.Core.csproj.AssemblyReference.cache
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net5.0\UdemyAuthServer.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net5.0\UdemyAuthServer.Core.AssemblyInfoInputs.cache
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net5.0\UdemyAuthServer.Core.AssemblyInfo.cs
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net5.0\UdemyAuthServer.Core.csproj.CoreCompileInputs.cache
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net5.0\UdemyAuthServer.Core.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net5.0\refint\UdemyAuthServer.Core.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net5.0\UdemyAuthServer.Core.pdb
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net5.0\ref\UdemyAuthServer.Core.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\bin\Debug\net5.0\SharedLibarary.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\bin\Debug\net5.0\SharedLibarary.pdb
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net5.0\UdemyAuthServer.Core.csproj.CopyComplete

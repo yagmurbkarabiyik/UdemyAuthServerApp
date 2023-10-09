@@ -1,0 +1,12 @@
+C:\Users\ygmr4\Desktop\UdemyAuthServer\SharedLibarary\bin\Debug\net5.0\SharedLibarary.deps.json
+C:\Users\ygmr4\Desktop\UdemyAuthServer\SharedLibarary\bin\Debug\net5.0\SharedLibarary.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\SharedLibarary\bin\Debug\net5.0\SharedLibarary.pdb
+C:\Users\ygmr4\Desktop\UdemyAuthServer\SharedLibarary\obj\Debug\net5.0\SharedLibarary.csproj.AssemblyReference.cache
+C:\Users\ygmr4\Desktop\UdemyAuthServer\SharedLibarary\obj\Debug\net5.0\SharedLibarary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ygmr4\Desktop\UdemyAuthServer\SharedLibarary\obj\Debug\net5.0\SharedLibarary.AssemblyInfoInputs.cache
+C:\Users\ygmr4\Desktop\UdemyAuthServer\SharedLibarary\obj\Debug\net5.0\SharedLibarary.AssemblyInfo.cs
+C:\Users\ygmr4\Desktop\UdemyAuthServer\SharedLibarary\obj\Debug\net5.0\SharedLibarary.csproj.CoreCompileInputs.cache
+C:\Users\ygmr4\Desktop\UdemyAuthServer\SharedLibarary\obj\Debug\net5.0\SharedLibarary.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\SharedLibarary\obj\Debug\net5.0\refint\SharedLibarary.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\SharedLibarary\obj\Debug\net5.0\SharedLibarary.pdb
+C:\Users\ygmr4\Desktop\UdemyAuthServer\SharedLibarary\obj\Debug\net5.0\ref\SharedLibarary.dll
