@@ -1,17 +1,24 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using SharedLibarary.Configuration;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using UdemyAuthServer.Core.Configuration;
+using UdemyAuthServer.Core.GenericService;
+using UdemyAuthServer.Core.Models;
+using UdemyAuthServer.Core.Repositories;
+using UdemyAuthServer.Core.Services;
+using UdemyAuthServer.Core.UnitOfWork;
+using UdemyAuthServer.Data;
+using UdemyAuthServer.Data.Repositories;
+using UdemyAuthServer.Service.Services;
 
 namespace UdemyAuthServer.API
 {
@@ -27,8 +34,66 @@ namespace UdemyAuthServer.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            //Dependency Injection (DI) Register
+
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<IUserService, UserService>();    
+            services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped(typeof(IServiceGeneric<,>), typeof(GenericService<,>));    
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("SqlServer"), sqlOptions =>
+                {
+                    sqlOptions.MigrationsAssembly("UdemyAuthServer.Data");
+                });
+            });
+
+            services.AddIdentity<UserApp, IdentityRole>(options =>
+            {
+                options.User.RequireUniqueEmail = true;
+                options.Password.RequireNonAlphanumeric = false;
+            }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
+
+            
+
+
+
             //options pattern
-            services.Configure<CustomTokenOption>(Configuration.GetSection("TokenOption")); 
+            services.Configure<CustomTokenOption>(Configuration.GetSection("TokenOption"));
+            services.Configure<List<Client>>(Configuration.GetSection("Clients"));
+
+
+            //üyelik sistemleri farklý olabilir. Scheme olarak adlandýrýlýrlar.
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;    
+
+            }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
+            {
+                var tokenOptions = Configuration.GetSection("TokenOptions").Get<CustomTokenOption>();
+
+                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+                {
+                    ValidIssuer = tokenOptions.Issuer,
+                    ValidAudience = tokenOptions.Audience[0],
+                    IssuerSigningKey = SignService.GetSymmetricSecurityKey(tokenOptions.SecurityKey),
+
+                    ValidateIssuerSigningKey = true,
+                    ValidateAudience = true,
+                    ValidateIssuer = true,
+                    ValidateLifetime = true,
+
+                    //default olarak 5 dakika eklenmemesi için
+                    ClockSkew = TimeSpan.Zero,
+                };
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -50,6 +115,8 @@ namespace UdemyAuthServer.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

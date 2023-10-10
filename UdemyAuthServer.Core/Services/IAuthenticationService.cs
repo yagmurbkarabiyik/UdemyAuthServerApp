@@ -13,6 +13,6 @@ namespace UdemyAuthServer.Core.Services
         Task<ResponseDto<TokenDto>> CreateTokenAsync(LoginDto logInDto);
         Task<ResponseDto<TokenDto>> CreateTokenByRefreshToken(string refreshToken); 
         Task<ResponseDto<NoDataDto>> RevokeRefreshToken(string refreshToken);
-        Task<ResponseDto<ClientLogInDto>> CreateTokenByClient(ClientLogInDto clientLogInDto);
+        ResponseDto<ClientTokenDto> CreateTokenByClient(ClientLogInDto clientLogInDto);
     }
 }
