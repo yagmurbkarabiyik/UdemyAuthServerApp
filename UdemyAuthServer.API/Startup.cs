@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using SharedLibarary.Configuration;
+using SharedLibarary.Services;
 using System;
 using System.Collections.Generic;
 using UdemyAuthServer.Core.Configuration;
@@ -65,7 +66,7 @@ namespace UdemyAuthServer.API
 
 
             //options pattern
-            services.Configure<CustomTokenOption>(Configuration.GetSection("TokenOption"));
+            services.Configure<CustomTokenOption>(Configuration.GetSection("TokenOptions"));
             services.Configure<List<Client>>(Configuration.GetSection("Clients"));
 
 

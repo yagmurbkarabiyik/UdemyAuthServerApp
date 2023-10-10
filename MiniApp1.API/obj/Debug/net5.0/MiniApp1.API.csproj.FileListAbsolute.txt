@@ -33,3 +33,10 @@ C:\Users\ygmr4\Desktop\UdemyAuthServer\MiniApp1.API\obj\Debug\net5.0\MiniApp1.AP
 C:\Users\ygmr4\Desktop\UdemyAuthServer\MiniApp1.API\obj\Debug\net5.0\ref\MiniApp1.API.dll
 C:\Users\ygmr4\Desktop\UdemyAuthServer\MiniApp1.API\bin\Debug\net5.0\SharedLibarary.dll
 C:\Users\ygmr4\Desktop\UdemyAuthServer\MiniApp1.API\bin\Debug\net5.0\SharedLibarary.pdb
+C:\Users\ygmr4\Desktop\UdemyAuthServer\MiniApp1.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\MiniApp1.API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\MiniApp1.API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\MiniApp1.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\MiniApp1.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\MiniApp1.API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\MiniApp1.API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

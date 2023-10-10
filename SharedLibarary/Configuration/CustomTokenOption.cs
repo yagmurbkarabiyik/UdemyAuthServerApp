@@ -8,7 +8,7 @@ namespace SharedLibarary.Configuration
 {
     public class CustomTokenOption
     {
-        public List<String> Audience { get; set; }
+        public List<string> Audience { get; set; }
         public string Issuer { get; set; }
         public int AccessTokenExpiration { get; set; }
         public int RefreshTokenExpiration { get; set; }

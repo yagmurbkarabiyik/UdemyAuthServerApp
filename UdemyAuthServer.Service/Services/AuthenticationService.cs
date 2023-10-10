@@ -51,6 +51,7 @@ namespace UdemyAuthServer.Service.Services
             var token = _tokenService.CreateToken(user);
 
             var userRefreshToken = await _userRefreshToken.Where(x => x.UserId == user.Id).SingleOrDefaultAsync();
+
             if (userRefreshToken == null)
             {
                 await _userRefreshToken.AddAsync(new UserRefreshToken { UserId = user.Id, Code = token.RefreshToken, 
