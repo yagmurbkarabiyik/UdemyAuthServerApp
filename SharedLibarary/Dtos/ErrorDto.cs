@@ -8,7 +8,7 @@ namespace SharedLibarary.Dtos
 {
     public class ErrorDto
     {
-        public List<String> Errors { get; private set; }
+        public List<String> Errors { get; private set; } = new List<string>();
         //kullanıcılara gösterilecek olan hatalar false
         public bool IsShow { get; private set; }
         public ErrorDto()
@@ -19,7 +19,7 @@ namespace SharedLibarary.Dtos
         public ErrorDto(string error, bool isShow)
         {
             Errors.Add(error);
-            isShow = true;
+            IsShow = isShow;
         }
 
         public ErrorDto(List<string> errors, bool ısShow)

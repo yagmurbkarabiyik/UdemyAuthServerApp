@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using SharedLibarary.Configuration;
+using SharedLibarary.Extensions;
 using SharedLibarary.Services;
 using System;
 using System.Collections.Generic;
@@ -97,6 +98,13 @@ namespace UdemyAuthServer.API
             });
 
             services.AddControllers();
+            //    .AddFluentValidation(options =>
+            //{
+            //    options.RegisterValidatorsFromAssemblyContaining<Startup>();
+            //});
+
+            services.UseCustomValidationResponse();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "UdemyAuthServer.API", Version = "v1" });
@@ -112,7 +120,11 @@ namespace UdemyAuthServer.API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "UdemyAuthServer.API v1"));
             }
+            else
+            {
+                app.UseCustomException();
 
+            }
             app.UseHttpsRedirection();
 
             app.UseRouting();

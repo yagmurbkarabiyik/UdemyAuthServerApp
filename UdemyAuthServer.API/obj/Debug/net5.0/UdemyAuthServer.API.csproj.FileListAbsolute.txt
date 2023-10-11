@@ -76,3 +76,4 @@ C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.API\bin\Debug\net5.0\Auto
 C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.API\bin\Debug\net5.0\Humanizer.dll
 C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ygmr4\Desktop\UdemyAuthServer\UdemyAuthServer.API\bin\Debug\net5.0\FluentValidation.dll

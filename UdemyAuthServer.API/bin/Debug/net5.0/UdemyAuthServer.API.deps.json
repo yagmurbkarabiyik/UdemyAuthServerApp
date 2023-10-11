@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "UdemyAuthServer.API/1.0.0": {
         "dependencies": {
+          "FluentValidation": "9.3.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.1",
           "Microsoft.EntityFrameworkCore.Design": "5.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.1",
@@ -338,6 +339,17 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "FluentValidation/9.3.0": {
+        "runtime": {
+          "lib/net5.0/FluentValidation.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.3.0.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/FluentValidation.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -3087,6 +3099,13 @@
       "sha512": "sha512-uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
       "path": "automapper/10.1.1",
       "hashPath": "automapper.10.1.1.nupkg.sha512"
+    },
+    "FluentValidation/9.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C44l6Ih+YwpED/TsXfl6LIq6Z4wLXahstnr6T70uUg1Hs7/bLBKKAo9Nl0sLhVjDE8TA+fF+O3IM4nDrwabcSQ==",
+      "path": "fluentvalidation/9.3.0",
+      "hashPath": "fluentvalidation.9.3.0.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

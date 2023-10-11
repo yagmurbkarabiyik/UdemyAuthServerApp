@@ -19,6 +19,19 @@
           }
         }
       },
+      "FluentValidation/9.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -1903,6 +1916,24 @@
         "lib/net461/AutoMapper.xml",
         "lib/netstandard2.0/AutoMapper.dll",
         "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
+    "FluentValidation/9.3.0": {
+      "sha512": "C44l6Ih+YwpED/TsXfl6LIq6Z4wLXahstnr6T70uUg1Hs7/bLBKKAo9Nl0sLhVjDE8TA+fF+O3IM4nDrwabcSQ==",
+      "type": "package",
+      "path": "fluentvalidation/9.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.9.3.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net461/FluentValidation.dll",
+        "lib/net461/FluentValidation.xml",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
       ]
     },
     "Humanizer.Core/2.8.26": {
@@ -6093,6 +6124,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "FluentValidation >= 9.3.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.1",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.1",
@@ -6147,6 +6179,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[9.3.0, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[5.0.1, )"
